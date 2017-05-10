@@ -45,7 +45,7 @@ public class NativeGeocoder extends CordovaPlugin {
 
     private void reverseGeocode(double latitude, double longitude, CallbackContext callbackContext) {
 
-        geocoder = new Geocoder(cordova.getActivity().getApplicationContext(), Locale.getDefault());
+        geocoder = new Geocoder(cordova.getActivity().getApplicationContext(), Locale('ru'));
 
         if (!geocoder.isPresent()) {
             PluginResult r = new PluginResult(PluginResult.Status.ERROR, "Geocoder is not present on this device/emulator.");
